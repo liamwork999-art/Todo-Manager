@@ -6,9 +6,9 @@ This starter file contains sample task data and comments for the core features y
 */
 
 const tasks = [
-  { title: "Study JavaScript", completed: false },
-  { title: "Exercise", completed: true },
-  { title: "Clean room", completed: false },
+  { title: 'Study JavaScript', completed: false },
+  { title: 'Exercise', completed: true },
+  { title: 'Clean room', completed: false },
 ];
 
 // TODO: add a function to add a new task
@@ -18,5 +18,13 @@ const tasks = [
 // TODO: add a function to count total, completed, and pending tasks
 
 // Example: you can test your functions here later
-console.log("Todo Manager starter file");
+console.log('Todo Manager starter file');
 console.log(tasks);
+
+function addTask(task, taskTitle) {
+  const newTask = {
+    title: taskTitle,
+    completed: false,
+  };
+  task.push(newTask);
+}
