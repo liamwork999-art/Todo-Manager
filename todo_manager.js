@@ -43,3 +43,19 @@ function delTask(task, taskTitle) {
     }
   }
 }
+
+function delTask(task, taskTitle) {
+  // Deleting task
+  const removeTask = {
+    title: taskTitle,
+    completed: true || false,
+  };
+
+  for (const eachTask of task) {
+    if (removeTask.title === eachTask.title) {
+      task.pop(removeTask);
+    }
+  }
+}
+
+// just saving the streak
