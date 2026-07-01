@@ -44,4 +44,31 @@ function delTask(task, taskTitle) {
   }
 }
 
-// just saving the streak
+function showCompletedTasks(task) {
+  // Showing completed tasks
+  const completedTasks = task.filter((task) => task.completed === true);
+  return completedTasks;
+}
+
+function showPendingTasks(task) {
+  // Showing pending tasks
+  const pendingTasks = task.filter((task) => task.completed === false);
+  return pendingTasks;
+}
+
+function markTaskCompleted(task, taskTitle) {
+  // Marking task as completed
+  for (const eachTask of task) {
+    if (taskTitle === eachTask.title) {
+      eachTask.completed = true;
+    }
+  }
+}
+
+function countTasks(task) {
+  // Counting total, completed, and pending tasks
+  const totalTasks = task.length;
+  const completedTasks = task.filter((task) => task.completed === true).length;
+  const pendingTasks = task.filter((task) => task.completed === false).length;
+  return { totalTasks, completedTasks, pendingTasks };
+}
